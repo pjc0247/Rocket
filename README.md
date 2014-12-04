@@ -43,7 +43,7 @@ RocketTestPool.execute \
 ```
 
 * C/C++에서의 사용<br>
-__빌드된 패킷 구조체만 사용__
+* __빌드된 패킷 구조체만 사용__
 스키마로부터 빌드된 패킷들의 구조체만 사용합니다.<br>
 각각의 패킷에 대한 handle/send 함수, 전반적인 서버 구조는 직접 작성해야 합니다.
 ```C++
@@ -54,8 +54,7 @@ resp.nickname = "hello";
 
 send(sock, &resp, sizeof(resp), 0);
 ```
-
-__래핑 사용__
+* __래핑 사용__
 스키마를 기반으로 빌드된 handle/send 함수들을 사용합니다.<br>
 전반적인 서버 구조는 직접 작성해야 합니다.
 ```C++
@@ -81,8 +80,7 @@ void processPacket(){
     handleLoginRequest(...);
 }
 ```
-
-__Rocket 프레임워크 사용__
+* __Rocket 프레임워크 사용__
 Rocket에서 제공하는 서버 프레임워크를 사용합니다.<br>
 네트워크와 서버는 고려하지 않고 각 패킷에 대한 로직만 작성하면 됩니다.
 ```C++
