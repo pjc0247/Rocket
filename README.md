@@ -92,7 +92,7 @@ void processPacket(){
 class LoginHandler{
 public:
   void handleRequest(
-    const Rocket::string &id, const Rocket::string &password,
+    const Rocket::String &id, const Rocket::String &password,
     Rocket::Timestamp time){
     
     /* ... */
